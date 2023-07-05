@@ -1,6 +1,6 @@
 import os
-#from pathlib import Path
 import logging
+import errno
 
 logging.basicConfig(level=logging.INFO,format='[%(asctime)s]: %(message)s:')
 
@@ -29,31 +29,6 @@ list_of_files = [
     "test.py",
 
 ]
-
-'''
-for filepath in list_of_files:
-    filepath = os.path.join(filepath)
-    filedir, filename = os.path.split(filepath)
-
-    if filedir !="":
-        os.makedirs(filedir, exist_ok=True)
-        logging.info("Created directory: {} for the file {}".format(filedir, filename))
-
-
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
-        with open(filepath, "w") as f:
-            pass
-            logging.info("creating empty file: {}".format(filepath))
-
-
-
-    else:
-        
-        logging.info("is already exists: {}".format(filename))
-'''
-
-import os
-import errno
 
 for filepath in list_of_files:
     filepath = os.path.join(filepath)
